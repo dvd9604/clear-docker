@@ -57,7 +57,8 @@ RUN pip install --upgrade pip
 
 USER ${USER}
 RUN  pip install --user -U setuptools \
-    && pip install --user mpi4py
+    && pip install --user mpi4py \
+    && pip install --user numpy
 
 # ------------------------------------------------------------
 # Configure OpenMPI
