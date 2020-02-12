@@ -1,0 +1,4 @@
+FROM python:3
+RUN pip install python-openstackclient python-heatclient python-neutronclient
+ENTRYPOINT [ "/bin/bash", "-c" ]
+CMD [ "openstack" ]
