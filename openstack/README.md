@@ -7,7 +7,7 @@
 git clone
 
 # cd into openstack dir
-cd /openstack
+cd ./openstack
 
 # build image and tag it with your username
 docker build . -t dvd9604/openstackcli
