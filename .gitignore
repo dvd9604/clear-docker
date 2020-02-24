@@ -3,3 +3,4 @@
 *openrc.sh
 *.rc
 hosts
+trapazoid.py
