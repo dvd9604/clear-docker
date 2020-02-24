@@ -56,7 +56,17 @@ The following bash command can be used to generate a machine or hosts file for m
 docker ps -q | xargs -n 1 docker inspect --format '{{ .Name }} {{range .NetworkSettings.Networks}} {{.IPAddress}}{{end}}' | sed 's#^/##' | grep "mpi"
 ```
 
-### SCP python files into containers
+### COPY File to all MPI Nodes
+
+A handy bash script has been included that copies a file to the `workdir` of all MPI nodes.
+The script uses docker inspect to gather container ID's then scp to copy the file.
+
+```shell
+cd mpi
+./cp.sh <filepath>
+```
+
+### SCP python files into containers manually
 
 SCP can be used to add files to the containers while they are running. replacing `host1` ... `hostn` with the IP addresses of each container will allow for this operation.
 

@@ -1,4 +1,5 @@
 
 # ignore all rc files and sh files
-*.sh
+*openrc.sh
 *.rc
+hosts
