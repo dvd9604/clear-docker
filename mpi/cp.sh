@@ -14,6 +14,8 @@ else
   # utilize scp to move file to each container
   for host in $(cat ./hosts)
     do
+      ssh-keygen -R $host
+      ssh-keyscan -H $host >> ~/.ssh/known_hosts
       scp -i ./ssh/id_rsa.mpi $1 mpirun@$host:/home/mpirun/workdir/;
     done
 fi 
